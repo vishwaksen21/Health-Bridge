@@ -1,0 +1,4 @@
+TNF
+IL6
+TP53
+NFE2L2

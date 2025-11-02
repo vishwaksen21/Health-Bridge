@@ -1,0 +1,12 @@
+pandas
+numpy
+networkx
+node2vec
+gensim
+scikit-learn
+joblib
+shap
+matplotlib
+streamlit
+azure-ai-inference
+azure-identity

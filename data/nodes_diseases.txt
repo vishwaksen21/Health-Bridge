@@ -1,0 +1,4 @@
+Inflammation
+Fever
+Cancer
+Diabetes

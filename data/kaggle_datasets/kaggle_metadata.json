@@ -1,0 +1,11 @@
+{
+  "diabetes": {
+    "description": "Diabetes prediction dataset from Pima Indian population",
+    "diseases": [
+      "Diabetes"
+    ],
+    "n_rows": 768,
+    "n_columns": 9,
+    "loaded_at": "2025-11-01T18:17:27.743396"
+  }
+}

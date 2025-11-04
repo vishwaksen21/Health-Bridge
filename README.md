@@ -1,4 +1,4 @@
-# 🏥 AI-Powered Herbal Medicine Assistant
+# 🏥 CureBlend AI — AI-powered dual health recommendation system
 
 An intelligent system that combines **machine learning**, **knowledge graphs**, and **AI** to provide personalized herbal medicine recommendations based on symptoms.
 
@@ -256,6 +256,18 @@ research/
 
 ---
 
+## 🎯 What's New
+
+✨ **Version 1.0 - AI-Enhanced Release**
+
+- ✅ Integrated AI LLM support (GitHub Models)
+- ✅ Enhanced user interface with better formatting
+- ✅ Batch processing support (stdin/pipe mode)
+- ✅ System test suite
+- ✅ Comprehensive setup guide
+- ✅ LLM insights generation
+- ✅ Multi-model support
+
 ## 🔄 Workflow
 
 ```
@@ -269,6 +281,37 @@ Knowledge Graph → Top 5 Herbs
     ↓
 Professional Output with Recommendations
 ```
+
+---
+
+## 📞 Quick Help
+
+**Test installation:**
+```bash
+python test_system.py
+```
+
+**Run the assistant:**
+```bash
+python main.py
+```
+
+**Enable AI:**
+```bash
+export GITHUB_TOKEN="your_token"
+python main.py
+```
+
+**See detailed guide:**
+```bash
+cat AI_SETUP_GUIDE.md
+```
+
+---
+
+**Status**: ✅ Operational  
+**Last Updated**: November 2025  
+**Version**: 1.0
 
 ---
 

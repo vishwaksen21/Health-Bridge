@@ -17,6 +17,12 @@ try:
         generate_comprehensive_answer,
         format_answer_for_display
     )
+    # QUICK WIN #4: Import safety checks module
+    from src.safety_checks import (
+        check_emergency_keywords,
+        check_confidence_threshold,
+        add_medical_disclaimer
+    )
     AI_MODULE_OK = True
 except ImportError as e:
     print(f"⚠️  WARNING: Could not import AI module: {e}")
@@ -119,6 +125,12 @@ def main():
                     if not user_input:
                         continue
                     
+                    # QUICK WIN #4A: Emergency Detection - Check in pipe mode too
+                    emergency_check = check_emergency_keywords(user_input)
+                    if emergency_check['is_emergency']:
+                        print(emergency_check['message'])
+                        continue  # Skip to next input in pipe mode
+                    
                     print(f"🧍 Analyzing: {user_input}")
                     progress_spinner(1.0)
                     
@@ -132,6 +144,15 @@ def main():
                         if use_ai and response.get("ai_insights"):
                             print("✅ AI insights generated successfully!\n")
                         print(format_answer_for_display(response))
+                        
+                        # QUICK WIN #4B: Low Confidence Warning
+                        predicted_confidence = response.get('confidence', 1.0)
+                        confidence_check = check_confidence_threshold(predicted_confidence)
+                        if confidence_check['show_warning']:
+                            print(confidence_check['message'])
+                        
+                        # Add medical disclaimer
+                        print(add_medical_disclaimer())
                     except Exception as e:
                         print(f"❌ Error processing symptoms: {e}")
                         print("   Continuing with next input...\n")
@@ -164,6 +185,13 @@ def main():
                         print("\n👋 Thank you for using the Dual Recommendation Assistant!")
                         break
                     
+                    # QUICK WIN #4A: Emergency Detection - Check BEFORE processing
+                    emergency_check = check_emergency_keywords(user_input)
+                    if emergency_check['is_emergency']:
+                        print(emergency_check['message'])
+                        print("\n⚠️  Exiting application. Please call emergency services.\n")
+                        sys.exit(1)
+                    
                     print("\n🔍 Analyzing your symptoms...")
                     progress_spinner(1.5)
                     print()
@@ -182,6 +210,15 @@ def main():
                         
                         # Display formatted answer
                         print(format_answer_for_display(response))
+                        
+                        # QUICK WIN #4B: Low Confidence Warning - Check AFTER prediction
+                        predicted_confidence = response.get('confidence', 1.0)
+                        confidence_check = check_confidence_threshold(predicted_confidence)
+                        if confidence_check['show_warning']:
+                            print(confidence_check['message'])
+                        
+                        # Add medical disclaimer
+                        print(add_medical_disclaimer())
                         
                         # Optional: Show JSON for debugging
                         try:

@@ -821,15 +821,27 @@ def suggest_drugs_for_disease(disease: str, top_n: int = 5) -> List[Dict]:
     for d in SAMPLE_DRUGS:
         name = d.get("name", "")
         purpose = d.get("purpose", "").lower()
-        if any(k in disease_l for k in ["fever", "headache", "pain"]) and "fever" in purpose or "pain" in purpose or "analgesic" in d.get("type", "").lower():
+        dtype = d.get("type", "").lower()
+        
+        # Check if drug matches disease keywords
+        if any(k in disease_l for k in ["fever", "headache", "pain", "muscle", "strain", "back", "sprain"]) and ("pain" in purpose or "analgesic" in dtype or "nsaid" in dtype):
             matched.append(d)
         elif any(k in disease_l for k in ["stomach", "gastric", "gastro", "ulcer", "acidity", "indigestion"]) and any(k in purpose for k in ["acid", "gastric", "reflux", "motility"]):
             matched.append(d)
-        else:
-            # generic offer
+        elif any(k in disease_l for k in ["kidney", "stone", "urinary"]) and any(k in purpose for k in ["pain", "kidney", "urinary", "stone"]):
             matched.append(d)
+        elif not matched:
+            # Generic offer pain relievers for unmatched diseases
+            if "pain" in purpose or "analgesic" in dtype:
+                matched.append(d)
+        
         if len(matched) >= top_n:
             break
+    
+    # If still no matches, provide general pain relievers as last resort
+    if not matched:
+        matched = [d for d in SAMPLE_DRUGS if "pain" in d.get("purpose", "").lower() or "analgesic" in d.get("type", "").lower()][:top_n]
+    
     return matched[:top_n]
 
 def load_drug_interactions(data_dir: str = "data") -> Dict:
@@ -949,6 +961,10 @@ def suggest_ingredients_for_disease(
             heuristics = [("Tulsi", 0.8), ("Ginger", 0.7), ("Licorice", 0.6)]
         elif "headache" in d or "migraine" in d:
             heuristics = [("Peppermint", 0.7), ("Feverfew", 0.6), ("Turmeric", 0.5)]
+        elif "muscle" in d or "strain" in d or "back pain" in d or "sprain" in d or "pain" in d:
+            heuristics = [("Turmeric", 0.8), ("Ginger", 0.75), ("Arnica", 0.7), ("Boswellia", 0.65)]
+        elif "kidney" in d or "stone" in d or "renal" in d or "urinary" in d:
+            heuristics = [("Chanca Piedra", 0.8), ("Dandelion", 0.7), ("Cranberry", 0.65), ("Hydrangea", 0.6)]
         else:
             heuristics = [("Turmeric", 0.6), ("Ginger", 0.55), ("Neem", 0.45)]
         return heuristics[:5]
@@ -956,13 +972,47 @@ def suggest_ingredients_for_disease(
     # If embeddings present, try to use them (kept backward-compatible)
     try:
         if not os.path.exists(embeddings_path) or not os.path.exists(model_path):
-            return suggest_ingredients_for_disease(disease, knowledge=knowledge)  # fallback recursion to heuristic
+            # Files don't exist, use heuristic fallback
+            d = (disease or "").lower()
+            heuristics = []
+            if "gastro" in d or "diarr" in d or "stomach" in d:
+                heuristics = [("Ginger", 0.85), ("Peppermint", 0.75), ("Turmeric", 0.6), ("ORS", 0.5)]
+            elif "fever" in d or "dengue" in d or "malaria" in d:
+                heuristics = [("Withaferin A", 0.7), ("Papaya leaf extract", 0.6), ("Turmeric", 0.5)]
+            elif "cold" in d or "cough" in d or "bronch" in d or "asthma" in d:
+                heuristics = [("Tulsi", 0.8), ("Ginger", 0.7), ("Licorice", 0.6)]
+            elif "headache" in d or "migraine" in d:
+                heuristics = [("Peppermint", 0.7), ("Feverfew", 0.6), ("Turmeric", 0.5)]
+            elif "muscle" in d or "strain" in d or "back pain" in d or "sprain" in d or "pain" in d:
+                heuristics = [("Turmeric", 0.8), ("Ginger", 0.75), ("Arnica", 0.7), ("Boswellia", 0.65)]
+            elif "kidney" in d or "stone" in d or "renal" in d or "urinary" in d:
+                heuristics = [("Chanca Piedra", 0.8), ("Dandelion", 0.7), ("Cranberry", 0.65), ("Hydrangea", 0.6)]
+            else:
+                heuristics = [("Turmeric", 0.6), ("Ginger", 0.55), ("Neem", 0.45)]
+            return heuristics[:5]
         emb = KeyedVectors.load(embeddings_path)
         model = joblib.load(model_path)
         ingredients = [l.strip() for l in open("data/nodes_ingredients.txt").read().splitlines() if l.strip()]
         lookup_name = disease_mapping.get(disease, disease)
         if lookup_name not in emb.key_to_index:
-            return []
+            # Disease not in embeddings, use heuristic fallback
+            d = (disease or "").lower()
+            heuristics = []
+            if "gastro" in d or "diarr" in d or "stomach" in d:
+                heuristics = [("Ginger", 0.85), ("Peppermint", 0.75), ("Turmeric", 0.6), ("ORS", 0.5)]
+            elif "fever" in d or "dengue" in d or "malaria" in d:
+                heuristics = [("Withaferin A", 0.7), ("Papaya leaf extract", 0.6), ("Turmeric", 0.5)]
+            elif "cold" in d or "cough" in d or "bronch" in d or "asthma" in d:
+                heuristics = [("Tulsi", 0.8), ("Ginger", 0.7), ("Licorice", 0.6)]
+            elif "headache" in d or "migraine" in d:
+                heuristics = [("Peppermint", 0.7), ("Feverfew", 0.6), ("Turmeric", 0.5)]
+            elif "muscle" in d or "strain" in d or "back pain" in d or "sprain" in d or "pain" in d:
+                heuristics = [("Turmeric", 0.8), ("Ginger", 0.75), ("Arnica", 0.7), ("Boswellia", 0.65)]
+            elif "kidney" in d or "stone" in d or "renal" in d or "urinary" in d:
+                heuristics = [("Chanca Piedra", 0.8), ("Dandelion", 0.7), ("Cranberry", 0.65), ("Hydrangea", 0.6)]
+            else:
+                heuristics = [("Turmeric", 0.6), ("Ginger", 0.55), ("Neem", 0.45)]
+            return heuristics[:5]
         scores = []
         for ing in ingredients:
             if ing in emb.key_to_index:
@@ -972,7 +1022,24 @@ def suggest_ingredients_for_disease(
         scores.sort(key=lambda x: x[1], reverse=True)
         return scores[:5]
     except Exception:
-        return suggest_ingredients_for_disease(disease, knowledge=knowledge)
+        # Exception occurred, use heuristic fallback
+        d = (disease or "").lower()
+        heuristics = []
+        if "gastro" in d or "diarr" in d or "stomach" in d:
+            heuristics = [("Ginger", 0.85), ("Peppermint", 0.75), ("Turmeric", 0.6), ("ORS", 0.5)]
+        elif "fever" in d or "dengue" in d or "malaria" in d:
+            heuristics = [("Withaferin A", 0.7), ("Papaya leaf extract", 0.6), ("Turmeric", 0.5)]
+        elif "cold" in d or "cough" in d or "bronch" in d or "asthma" in d:
+            heuristics = [("Tulsi", 0.8), ("Ginger", 0.7), ("Licorice", 0.6)]
+        elif "headache" in d or "migraine" in d:
+            heuristics = [("Peppermint", 0.7), ("Feverfew", 0.6), ("Turmeric", 0.5)]
+        elif "muscle" in d or "strain" in d or "back pain" in d or "sprain" in d or "pain" in d:
+            heuristics = [("Turmeric", 0.8), ("Ginger", 0.75), ("Arnica", 0.7), ("Boswellia", 0.65)]
+        elif "kidney" in d or "stone" in d or "renal" in d or "urinary" in d:
+            heuristics = [("Chanca Piedra", 0.8), ("Dandelion", 0.7), ("Cranberry", 0.65), ("Hydrangea", 0.6)]
+        else:
+            heuristics = [("Turmeric", 0.6), ("Ginger", 0.55), ("Neem", 0.45)]
+        return heuristics[:5]
 
 # ------------------------------------------------------------------------------------
 # AI insights: uses Azure/GitHub LLM if available, otherwise uses heuristic fallback

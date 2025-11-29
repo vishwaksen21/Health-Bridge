@@ -1,0 +1,351 @@
+{
+  "overall": {
+    "accuracy": 0.9689922480620154,
+    "macro_f1": 0.9680133701787529,
+    "weighted_f1": 0.9680133701787528,
+    "log_loss": 0.4287551363124255,
+    "high_confidence_pct": 0.46770025839793283,
+    "low_confidence_pct": 0.09043927648578812
+  },
+  "per_disease": [
+    {
+      "Disease": "Allergic Reaction",
+      "Precision": 1.0,
+      "Recall": 1.0,
+      "F1-Score": 1.0,
+      "Support": 9
+    },
+    {
+      "Disease": "Gout",
+      "Precision": 1.0,
+      "Recall": 1.0,
+      "F1-Score": 1.0,
+      "Support": 9
+    },
+    {
+      "Disease": "Hyperthyroidism",
+      "Precision": 1.0,
+      "Recall": 1.0,
+      "F1-Score": 1.0,
+      "Support": 9
+    },
+    {
+      "Disease": "Hypothyroidism",
+      "Precision": 1.0,
+      "Recall": 1.0,
+      "F1-Score": 1.0,
+      "Support": 9
+    },
+    {
+      "Disease": "Irritable Bowel Syndrome",
+      "Precision": 1.0,
+      "Recall": 1.0,
+      "F1-Score": 1.0,
+      "Support": 9
+    },
+    {
+      "Disease": "Kidney Stones",
+      "Precision": 1.0,
+      "Recall": 1.0,
+      "F1-Score": 1.0,
+      "Support": 9
+    },
+    {
+      "Disease": "Osteoarthritis",
+      "Precision": 1.0,
+      "Recall": 1.0,
+      "F1-Score": 1.0,
+      "Support": 9
+    },
+    {
+      "Disease": "Osteoporosis",
+      "Precision": 1.0,
+      "Recall": 1.0,
+      "F1-Score": 1.0,
+      "Support": 9
+    },
+    {
+      "Disease": "Peptic Ulcer",
+      "Precision": 1.0,
+      "Recall": 1.0,
+      "F1-Score": 1.0,
+      "Support": 9
+    },
+    {
+      "Disease": "Pneumonia",
+      "Precision": 1.0,
+      "Recall": 1.0,
+      "F1-Score": 1.0,
+      "Support": 9
+    },
+    {
+      "Disease": "Rheumatoid Arthritis",
+      "Precision": 1.0,
+      "Recall": 1.0,
+      "F1-Score": 1.0,
+      "Support": 9
+    },
+    {
+      "Disease": "Sepsis",
+      "Precision": 1.0,
+      "Recall": 1.0,
+      "F1-Score": 1.0,
+      "Support": 9
+    },
+    {
+      "Disease": "Sinusitis",
+      "Precision": 1.0,
+      "Recall": 1.0,
+      "F1-Score": 1.0,
+      "Support": 9
+    },
+    {
+      "Disease": "Stroke",
+      "Precision": 1.0,
+      "Recall": 1.0,
+      "F1-Score": 1.0,
+      "Support": 9
+    },
+    {
+      "Disease": "Tonsillitis",
+      "Precision": 1.0,
+      "Recall": 1.0,
+      "F1-Score": 1.0,
+      "Support": 9
+    },
+    {
+      "Disease": "Tuberculosis",
+      "Precision": 1.0,
+      "Recall": 1.0,
+      "F1-Score": 1.0,
+      "Support": 9
+    },
+    {
+      "Disease": "Typhoid",
+      "Precision": 1.0,
+      "Recall": 1.0,
+      "F1-Score": 1.0,
+      "Support": 9
+    },
+    {
+      "Disease": "Heart Attack",
+      "Precision": 1.0,
+      "Recall": 1.0,
+      "F1-Score": 1.0,
+      "Support": 9
+    },
+    {
+      "Disease": "Urinary Tract Infection",
+      "Precision": 1.0,
+      "Recall": 1.0,
+      "F1-Score": 1.0,
+      "Support": 9
+    },
+    {
+      "Disease": "Gastroenteritis",
+      "Precision": 1.0,
+      "Recall": 1.0,
+      "F1-Score": 1.0,
+      "Support": 9
+    },
+    {
+      "Disease": "Gallstones",
+      "Precision": 1.0,
+      "Recall": 1.0,
+      "F1-Score": 1.0,
+      "Support": 9
+    },
+    {
+      "Disease": "Angina",
+      "Precision": 1.0,
+      "Recall": 1.0,
+      "F1-Score": 1.0,
+      "Support": 9
+    },
+    {
+      "Disease": "Appendicitis",
+      "Precision": 1.0,
+      "Recall": 1.0,
+      "F1-Score": 1.0,
+      "Support": 9
+    },
+    {
+      "Disease": "Arthritis",
+      "Precision": 1.0,
+      "Recall": 1.0,
+      "F1-Score": 1.0,
+      "Support": 9
+    },
+    {
+      "Disease": "Celiac Disease",
+      "Precision": 1.0,
+      "Recall": 1.0,
+      "F1-Score": 1.0,
+      "Support": 9
+    },
+    {
+      "Disease": "Chronic Fatigue Syndrome",
+      "Precision": 1.0,
+      "Recall": 1.0,
+      "F1-Score": 1.0,
+      "Support": 9
+    },
+    {
+      "Disease": "Common Cold",
+      "Precision": 1.0,
+      "Recall": 1.0,
+      "F1-Score": 1.0,
+      "Support": 9
+    },
+    {
+      "Disease": "Dengue",
+      "Precision": 1.0,
+      "Recall": 1.0,
+      "F1-Score": 1.0,
+      "Support": 9
+    },
+    {
+      "Disease": "Diabetes",
+      "Precision": 1.0,
+      "Recall": 1.0,
+      "F1-Score": 1.0,
+      "Support": 9
+    },
+    {
+      "Disease": "Fibromyalgia",
+      "Precision": 1.0,
+      "Recall": 1.0,
+      "F1-Score": 1.0,
+      "Support": 9
+    },
+    {
+      "Disease": "GERD",
+      "Precision": 1.0,
+      "Recall": 1.0,
+      "F1-Score": 1.0,
+      "Support": 9
+    },
+    {
+      "Disease": "Measles",
+      "Precision": 0.9,
+      "Recall": 1.0,
+      "F1-Score": 0.9473684210526315,
+      "Support": 9
+    },
+    {
+      "Disease": "Migraine",
+      "Precision": 0.9,
+      "Recall": 1.0,
+      "F1-Score": 0.9473684210526315,
+      "Support": 9
+    },
+    {
+      "Disease": "Anaphylaxis",
+      "Precision": 0.9,
+      "Recall": 1.0,
+      "F1-Score": 0.9473684210526315,
+      "Support": 9
+    },
+    {
+      "Disease": "Chickenpox",
+      "Precision": 1.0,
+      "Recall": 0.8888888888888888,
+      "F1-Score": 0.9411764705882353,
+      "Support": 9
+    },
+    {
+      "Disease": "COVID-19",
+      "Precision": 1.0,
+      "Recall": 0.8888888888888888,
+      "F1-Score": 0.9411764705882353,
+      "Support": 9
+    },
+    {
+      "Disease": "Anemia",
+      "Precision": 0.8181818181818182,
+      "Recall": 1.0,
+      "F1-Score": 0.9,
+      "Support": 9
+    },
+    {
+      "Disease": "Malaria",
+      "Precision": 0.8888888888888888,
+      "Recall": 0.8888888888888888,
+      "F1-Score": 0.8888888888888888,
+      "Support": 9
+    },
+    {
+      "Disease": "Bronchitis",
+      "Precision": 0.8888888888888888,
+      "Recall": 0.8888888888888888,
+      "F1-Score": 0.8888888888888888,
+      "Support": 9
+    },
+    {
+      "Disease": "Hypertension",
+      "Precision": 1.0,
+      "Recall": 0.7777777777777778,
+      "F1-Score": 0.875,
+      "Support": 9
+    },
+    {
+      "Disease": "Meningitis",
+      "Precision": 0.75,
+      "Recall": 1.0,
+      "F1-Score": 0.8571428571428571,
+      "Support": 9
+    },
+    {
+      "Disease": "Asthma",
+      "Precision": 0.875,
+      "Recall": 0.7777777777777778,
+      "F1-Score": 0.8235294117647058,
+      "Support": 9
+    },
+    {
+      "Disease": "Influenza",
+      "Precision": 0.8333333333333334,
+      "Recall": 0.5555555555555556,
+      "F1-Score": 0.6666666666666666,
+      "Support": 9
+    }
+  ],
+  "calibration": {
+    "avg_error": 0.20291747261046839,
+    "per_disease": [
+      {
+        "disease": "Urinary Tract Infection",
+        "calibration_error": 0.17287740998755988
+      },
+      {
+        "disease": "Allergic Reaction",
+        "calibration_error": 0.1964837542849896
+      },
+      {
+        "disease": "COVID-19",
+        "calibration_error": 0.22302176040894423
+      },
+      {
+        "disease": "Meningitis",
+        "calibration_error": 0.27434493935619664
+      },
+      {
+        "disease": "Hypothyroidism",
+        "calibration_error": 0.1478594990146514
+      }
+    ]
+  },
+  "emergency": {
+    "accuracy": 1.0,
+    "avg_confidence": 0.7083356521034391,
+    "sample_count": 54
+  },
+  "metadata": {
+    "timestamp": "2025-11-29T19:11:49.815188",
+    "model_path": "data/symptom_model.pkl",
+    "data_path": "data/symptom_disease_augmented.csv",
+    "total_diseases": 43,
+    "total_samples": 1935,
+    "test_samples": 387
+  }
+}

@@ -1,0 +1,11 @@
+,Urinary Tract Infection,Allergic Reaction,COVID-19,Meningitis,Hypothyroidism,Stroke,Asthma,Anaphylaxis,Hypertension,Anemia
+Urinary Tract Infection,9,0,0,0,0,0,0,0,0,0
+Allergic Reaction,0,9,0,0,0,0,0,0,0,0
+COVID-19,0,0,8,0,0,0,0,0,0,1
+Meningitis,0,0,0,9,0,0,0,0,0,0
+Hypothyroidism,0,0,0,0,9,0,0,0,0,0
+Stroke,0,0,0,0,0,9,0,0,0,0
+Asthma,0,0,0,0,0,0,7,1,0,0
+Anaphylaxis,0,0,0,0,0,0,0,9,0,0
+Hypertension,0,0,0,1,0,0,0,0,7,1
+Anemia,0,0,0,0,0,0,0,0,0,9

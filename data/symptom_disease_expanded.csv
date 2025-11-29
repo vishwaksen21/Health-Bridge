@@ -1,0 +1,646 @@
+symptom_text,disease
+throat pain fever swollen glands,Tonsillitis
+mucus in stool with cramping,Irritable Bowel Syndrome
+spastic colon abdominal cramping,Irritable Bowel Syndrome
+difficulty breathing,Hypertension
+fatigue with pale skin,Anemia
+infected tonsils painful swallowing,Tonsillitis
+chronic abdominal pain bowel issues,Irritable Bowel Syndrome
+shortness of breath with chest tightness,Angina
+knee pain when walking stairs,Osteoarthritis
+Experiencing fever and extreme fatigue,Influenza
+arm weakness unable to raise both arms,Stroke
+fever with digestive issues,Typhoid
+high fever with rash,Measles
+I have spots behind ears,Measles
+vision problems,Hypertension
+sudden pain near navel that moves to lower right,Appendicitis
+sudden numbness on one side of body,Stroke
+strong urge to urinate,Urinary Tract Infection
+fever with body ache,COVID-19
+fever with itchy spots,Chickenpox
+sudden drop in blood pressure dizziness,Anaphylaxis
+Recently developed fever and sweating episodes,Malaria
+crushing chest pain pressure discomfort,Heart Attack
+cough with phlegm,Pneumonia
+sleep problems with body pain,Fibromyalgia
+sinusitis symptoms congestion pressure,Sinusitis
+chronic fatigue syndrome tired all time,Chronic Fatigue Syndrome
+recurring chest pain with activity,Angina
+swollen tongue and lips trouble breathing,Anaphylaxis
+headache and weakness,Typhoid
+Experiencing fever with constipation,Typhoid
+lower abdominal pain,Urinary Tract Infection
+fever and chesty cough,Pneumonia
+nosebleeds with headache,Hypertension
+CFS symptoms severe fatigue weakness,Chronic Fatigue Syndrome
+fever with bleeding gums,Dengue
+fever chills and weakness,Influenza
+confusion can't understand what people say,Stroke
+wheezing and cough,Asthma
+severe reaction to food medication insect,Anaphylaxis
+red shiny skin over swollen joint,Gout
+rash with fever,Measles
+high fever with body ache,Influenza
+excessive urination at night since yesterday,Diabetes
+wheezing with chest pain,Asthma
+itchy bumps on skin,Chickenpox
+sinus infection facial pain congestion,Sinusitis
+chest pain after lying down,GERD
+red bumps turning to blisters,Chickenpox
+fibromyalgia symptoms pain fatigue,Fibromyalgia
+white spots on tonsils sore throat,Tonsillitis
+headache with sensitivity to light for past few days,Migraine
+fever with vomiting,Malaria
+Having difficulty breathing and cough,Pneumonia
+Feeling nervousness and anxiety,Hyperthyroidism
+shivering extreme cold with fever,Sepsis
+Having frequent hunger with weight loss,Diabetes
+speech difficulty slurred words confused,Stroke
+blurred vision and thirst,Diabetes
+body pain and chills,Influenza
+pounding in chest,Hypertension
+burning sensation during urination,Urinary Tract Infection
+dizziness and headache,Hypertension
+joint stiffness in morning,Arthritis
+skin eruptions with itching,Chickenpox
+peptic ulcer symptoms stomach pain burning,Peptic Ulcer
+paralysis on one side of body sudden,Stroke
+passing kidney stones painful urination blood,Kidney Stones
+slow healing wounds,Diabetes
+wheezing and cough for past few days,Asthma
+fever with loss of appetite,Typhoid
+stomach pain worse when hungry,Peptic Ulcer
+fever with dry cough,COVID-19
+swollen lymph nodes neck throat pain,Tonsillitis
+nausea with severe pain in kidney area,Kidney Stones
+frequent urge to urinate,Urinary Tract Infection
+wheezing difficulty breathing tight chest,Anaphylaxis
+joint pain and stiffness,Arthritis
+shivering and high fever,Malaria
+headache with nausea for past few days,Migraine
+Suffering from chest pain with headache,Hypertension
+Experiencing persistent cough with mucus,Bronchitis
+chest pain and fatigue,Tuberculosis
+postnasal drip with facial pressure,Sinusitis
+angina attack during physical activity,Angina
+Having dry skin and hair loss,Hypothyroidism
+Feeling cough with phlegm,Pneumonia
+abdominal pain with bowel changes,Irritable Bowel Syndrome
+intestinal damage from gluten,Celiac Disease
+IBS symptoms pain bloating diarrhea,Irritable Bowel Syndrome
+productive cough with fever,Pneumonia
+irritability with light sensitivity fever,Meningitis
+wheezing with cough,Bronchitis
+itchy rash with blisters,Chickenpox
+GERD symptoms heartburn acid reflux,GERD
+weight gain with tiredness since yesterday,Hypothyroidism
+Feeling rapid heartbeat,Hyperthyroidism
+heat intolerance,Hyperthyroidism
+headache nausea vomiting confused,Meningitis
+itchy rash spreading rapidly all over,Anaphylaxis
+productive cough,Bronchitis
+I have high fever with rash,Measles
+joint pain and reduced mobility,Arthritis
+burning sensation during urination since yesterday,Urinary Tract Infection
+stomach cramps with gas bloating,Irritable Bowel Syndrome
+Recently developed swollen joints,Arthritis
+high fever with joint pain,Dengue
+heartburn worse at night lying,GERD
+headache with light sensitivity,Migraine
+I have chest discomfort and cough,Bronchitis
+degenerative joint disease pain,Osteoarthritis
+I have constant thirst,Diabetes
+chest pain or discomfort with exertion,Angina
+fever chills and nausea,Malaria
+malnutrition with digestive problems,Celiac Disease
+headache with visual disturbances,Migraine
+burning while urinating since yesterday,Urinary Tract Infection
+fatigue even after sleeping,Fibromyalgia
+pain started around belly button moved to right,Appendicitis
+excruciating flank pain that comes in waves,Kidney Stones
+pain subsides within 5 minutes of rest,Angina
+difficulty swallowing tonsils swollen,Tonsillitis
+painful urination,Urinary Tract Infection
+weight loss and fatigue,Tuberculosis
+joint stiffness in morning brief,Osteoarthritis
+swollen tonsils with white patches,Tonsillitis
+Recently developed pale skin,Anemia
+fatigue with chronic diarrhea,Celiac Disease
+persistent cough with weight loss,Tuberculosis
+joint pain improves with rest,Osteoarthritis
+shortness of breath,COVID-19
+Feeling wheezing with cough,Bronchitis
+difficulty swallowing with heartburn,GERD
+sepsis symptoms fever confusion rapid breathing,Sepsis
+muscle weakness and fatigue,Hypothyroidism
+chest tightness with shortness of breath,Heart Attack
+chronic diarrhea malabsorption,Celiac Disease
+abdominal pain worse with coughing or walking,Appendicitis
+sensitive to touch pressure pain,Fibromyalgia
+swollen tender warm joints both hands,Rheumatoid Arthritis
+bone weakness fractures with minimal trauma,Osteoporosis
+severe right abdominal pain with vomiting,Appendicitis
+tonsillitis red swollen tonsils,Tonsillitis
+celiac disease gluten intolerance,Celiac Disease
+stroke symptoms face drooping arm weakness,Stroke
+debilitating fatigue brain fog,Chronic Fatigue Syndrome
+persistent cough lasting weeks,Tuberculosis
+nausea and vomiting with right side pain,Gallstones
+sudden severe pain below breastbone,Gallstones
+vomiting and abdominal pain,Gastroenteritis
+wheezing after exertion,Asthma
+rapid heartbeat,Hyperthyroidism
+sneezing and watery eyes,Common Cold
+frequent sneezing with cough,Common Cold
+Recently developed night sweats and fever,Tuberculosis
+stooped posture bent forward,Osteoporosis
+kidney pain radiating to lower abdomen and groin,Kidney Stones
+bowel habits changed pain cramping,Irritable Bowel Syndrome
+tender abdomen right side can't stand straight,Appendicitis
+appendix pain with fever and loss of appetite,Appendicitis
+Recently developed chest congestion,Bronchitis
+wheezing with chest pain since yesterday,Asthma
+chills with headache for past few days,Malaria
+stomach cramps and fever,Gastroenteritis
+pulsating headache,Migraine
+burning while urinating,Urinary Tract Infection
+"can't eat, stomach hurts badly on right side",Appendicitis
+indigestion with stomach pain,Peptic Ulcer
+high fever with cough,Pneumonia
+trembling hands,Hyperthyroidism
+nausea vomiting with breathing difficulty,Anaphylaxis
+joint pain worse end of day,Osteoarthritis
+chest tightness with cough,Bronchitis
+runny nose and sneezing,Common Cold
+shortness of breath rapid breathing,Sepsis
+sudden severe headache like never before,Stroke
+mottled skin poor circulation fever,Sepsis
+upper body pain chest arms back neck jaw,Heart Attack
+chills with headache,Malaria
+profound fatigue not explained,Chronic Fatigue Syndrome
+cold intolerance with fatigue,Hypothyroidism
+body aches pain exhaustion,Fibromyalgia
+persistent productive cough,Bronchitis
+rash with fever,Chickenpox
+unbearable pain in toe joint,Gout
+painful urination with pink or red urine,Kidney Stones
+Recently developed chills with muscle pain,Influenza
+Suffering from chest pain with cough,Tuberculosis
+gout symptoms toe pain swelling,Gout
+pain in multiple joints since yesterday,Arthritis
+stomach cramps with nausea,Gastroenteritis
+cough lasting more than 3 weeks,Tuberculosis
+age-related arthritis joint discomfort,Osteoarthritis
+diarrhea and vomiting,Gastroenteritis
+severe infection spreading through body,Sepsis
+prolonged fever,Typhoid
+pain on one side of head,Migraine
+knee swelling pain walking,Osteoarthritis
+severe throbbing headache,Migraine
+gallstone attack severe right upper belly pain,Gallstones
+severe sore throat difficulty swallowing,Tonsillitis
+bone fracture easier than expected,Osteoporosis
+cloudy urine since yesterday,Urinary Tract Infection
+facial pain and pressure around sinuses,Sinusitis
+abdominal pain eating wheat products,Celiac Disease
+nervousness and anxiety,Hyperthyroidism
+trembling hands since yesterday,Hyperthyroidism
+cloudy urine with bad smell and pain,Kidney Stones
+fever with runny nose and rash,Measles
+constant thirst,Diabetes
+neck rigidity cannot bend neck forward,Meningitis
+diarrhea alternating with constipation,Irritable Bowel Syndrome
+watery diarrhea,Gastroenteritis
+coughing up blood,Tuberculosis
+joint flexibility loss limited motion,Osteoarthritis
+chills with muscle pain,Influenza
+fever with skin rash,Chickenpox
+anxiety with weight loss,Hyperthyroidism
+Experiencing sore throat with cough,Common Cold
+right upper quadrant pain with indigestion,Gallstones
+dry cough with fever,COVID-19
+confusion drowsiness with severe headache,Meningitis
+vomiting with stomach pain,Gastroenteritis
+acute gout flare big toe,Gout
+blood in urine with sharp back pain,Kidney Stones
+Suffering from joint pain and headache,Dengue
+sweating and tremors,Hyperthyroidism
+body ache with high temperature,Influenza
+severe headache and fever for past few days,Influenza
+Having nausea and stomach upset,Gastroenteritis
+extreme fatigue not relieved by rest,Chronic Fatigue Syndrome
+muscle pain with fever,Influenza
+symmetrical joint pain both sides,Rheumatoid Arthritis
+gout attack intense joint pain,Gout
+persistent cough lasting weeks since yesterday,Tuberculosis
+breathlessness with fatigue,Anemia
+sore throat fever bad breath,Tonsillitis
+headache with nausea,Migraine
+photophobia severe headache neck stiffness,Meningitis
+tight band around chest when walking,Angina
+joint pain stiffness morning lasting hours,Rheumatoid Arthritis
+Having itchy bumps on skin,Chickenpox
+I have fever with rash,Dengue
+spots behind ears,Measles
+severe headache and fever,Dengue
+sneezing runny nose watery eyes,Allergic Reaction
+chest tightness,Asthma
+constipation and fatigue,Hypothyroidism
+difficulty breathing,COVID-19
+weight loss despite eating,Celiac Disease
+kidney stone attack pain nausea vomiting,Kidney Stones
+Recently developed pulsating headache,Migraine
+intense headache one side,Migraine
+chest pain radiating down left arm,Heart Attack
+sluggishness and weight gain,Hypothyroidism
+intense cramping in back and side,Kidney Stones
+sharp stabbing pain right lower belly,Appendicitis
+gastroesophageal reflux burning chest,GERD
+septic shock symptoms fever confusion,Sepsis
+high fever with rapid heart rate,Sepsis
+severe fatigue and fever,Influenza
+sweating with fever,Malaria
+tonsillitis fever sore throat swelling,Tonsillitis
+muscle pain stiffness fatigue,Fibromyalgia
+loose stools and fever,Gastroenteritis
+pressure in chest when climbing stairs,Angina
+swelling of lips face throat,Allergic Reaction
+can't get comfortable pain in kidney region,Kidney Stones
+chronic back pain weak bones,Osteoporosis
+sinus pressure headache congestion,Sinusitis
+burning sensation behind breastbone,GERD
+increased appetite with fatigue,Diabetes
+sudden severe pain in big toe,Gout
+throbbing pain with nausea,Migraine
+Suffering from fever with skin rash,Chickenpox
+breathlessness with cough,Asthma
+chronic digestive issues gluten,Celiac Disease
+extreme exhaustion lasting over 6 months,Chronic Fatigue Syndrome
+fever and fatigue for past few days,COVID-19
+drooping face weak arm slurred speech,Stroke
+gallbladder pain after eating fatty foods,Gallstones
+enlarged tonsils with pus,Tonsillitis
+abdominal pain diarrhea or constipation,Irritable Bowel Syndrome
+joint pain with high temperature,Dengue
+morning stiffness in joints,Arthritis
+bitter taste acid coming up,GERD
+excessive urination at night,Diabetes
+Suffering from itchy rash with blisters,Chickenpox
+wear and tear arthritis,Osteoarthritis
+fever and fatigue,Typhoid
+Suffering from joint swelling and pain,Arthritis
+face swelling difficulty breathing hives,Anaphylaxis
+night sweats and fever,Tuberculosis
+seizures with high fever and headache,Meningitis
+upper abdomen pain that lasts for hours,Gallstones
+fever with constipation,Typhoid
+chronic inflammation joints morning stiffness,Rheumatoid Arthritis
+fever with chest pain,Pneumonia
+nasal congestion and headache,Common Cold
+dizziness and fatigue,Anemia
+stiff neck cannot touch chin to chest,Meningitis
+unexplained weight gain,Hypothyroidism
+chest pain and fever,Pneumonia
+pressing on right abdomen causes severe pain,Appendicitis
+persistent cough,Asthma
+throat pain and runny nose,Common Cold
+nausea with chest pressure and anxiety,Heart Attack
+fever with rash,Dengue
+Recently developed weight loss and sweating,Hyperthyroidism
+I have weight loss and fatigue,Tuberculosis
+pain after eating fried or greasy food,Gallstones
+abdominal pain with diarrhea for past few days,Gastroenteritis
+face drooping on one side can't smile,Stroke
+nasal congestion stuffy nose,Sinusitis
+chest tightness since yesterday,Asthma
+irritable bowel abdominal pain,Irritable Bowel Syndrome
+acid backup into throat,GERD
+hives all over body itching swelling,Anaphylaxis
+chest discomfort and cough,Bronchitis
+high temperature with weakness,Malaria
+cough with loss of taste,COVID-19
+bone on bone grinding sensation,Osteoarthritis
+cognitive difficulties fibro fog,Fibromyalgia
+chronic heartburn several times week,GERD
+difficulty breathing after allergen exposure,Anaphylaxis
+high fever with eye pain for past few days,Dengue
+tiredness with increased thirst,Diabetes
+intense pain in upper belly center,Gallstones
+joint inflammation very tender,Gout
+skin rash red itchy bumps,Allergic Reaction
+mild fever with runny nose for past few days,Common Cold
+dry skin and hair loss,Hypothyroidism
+sinus pain worse bending forward,Sinusitis
+bloating with abdominal discomfort,Irritable Bowel Syndrome
+nausea with loose motions,Gastroenteritis
+GERD acid reflux heartburn symptoms,GERD
+back pain between shoulders with nausea,Gallstones
+severe abdominal pain with nausea and vomiting,Appendicitis
+shortness of breath at night since yesterday,Asthma
+rapid breathing over 20 breaths per minute,Sepsis
+severe headache,Hypertension
+fatigue with joint pain swelling,Rheumatoid Arthritis
+Experiencing frequent urination,Diabetes
+bladder discomfort,Urinary Tract Infection
+bilateral joint pain hands wrists,Rheumatoid Arthritis
+Feeling high fever with cough,Pneumonia
+fever with body ache,Malaria
+Feeling high fever with body ache,Influenza
+mild fever with runny nose,Common Cold
+increased heart rate,Hyperthyroidism
+frequent hunger with weight loss,Diabetes
+pain in forehead cheeks nose,Sinusitis
+severe headache with vomiting,Migraine
+exhaustion worsens with activity,Chronic Fatigue Syndrome
+blocked nose facial tenderness,Sinusitis
+fever with night sweats,Tuberculosis
+unrefreshing sleep still tired,Chronic Fatigue Syndrome
+hip pain stiffness after rest,Osteoarthritis
+reduced sense of smell congestion,Sinusitis
+severe exhaustion difficulty concentrating,Chronic Fatigue Syndrome
+diarrhea and vomiting since yesterday,Gastroenteritis
+feeling like elephant sitting on chest,Heart Attack
+chest pain when breathing for past few days,Pneumonia
+height loss stooped posture,Osteoporosis
+nausea and stomach upset,Gastroenteritis
+high fever with chills,Malaria
+I have nosebleeds with headache,Hypertension
+rash that doesn't fade when pressed,Meningitis
+vision problems in one or both eyes,Stroke
+feeling like might die sense of doom,Sepsis
+weight loss and sweating,Hyperthyroidism
+lightheaded dizzy with chest discomfort,Heart Attack
+brittle bones break easily,Osteoporosis
+pelvic pain since yesterday,Urinary Tract Infection
+decreased urine output with infection,Sepsis
+arthritis pain hands knees hips,Osteoarthritis
+difficulty breathing and cough,Pneumonia
+back pain from fractured vertebrae,Osteoporosis
+fever and fatigue,COVID-19
+joint deformity with chronic pain,Rheumatoid Arthritis
+headache from sinus pressure,Sinusitis
+Experiencing periodic fever attacks,Malaria
+pain in multiple body areas,Fibromyalgia
+pain so bad can't touch joint,Gout
+bloating diarrhea after bread pasta,Celiac Disease
+breathing difficulty with cough,Pneumonia
+pain in chest arms neck jaw back,Angina
+myalgic encephalomyelitis chronic fatigue,Chronic Fatigue Syndrome
+severe headache with stiff neck,Meningitis
+joint pain swelling redness warmth,Gout
+shortness of breath at night,Asthma
+itchy rash hives after exposure,Allergic Reaction
+pelvic pain,Urinary Tract Infection
+loss of smell and taste,COVID-19
+fever and muscle pain,Dengue
+fever with abdominal pain,Typhoid
+red itchy welts on skin,Allergic Reaction
+allergic response hives itching swelling,Allergic Reaction
+face arm speech symptoms sudden onset,Stroke
+weight gain with tiredness,Hypothyroidism
+red spots spreading from face,Measles
+confusion with signs of infection,Sepsis
+altered mental state with infection,Sepsis
+extreme pain or discomfort,Sepsis
+weight loss with increased appetite,Hyperthyroidism
+tender points neck shoulders back,Fibromyalgia
+coughing up blood since yesterday,Tuberculosis
+Experiencing prolonged fever,Typhoid
+sore throat with cough,Common Cold
+upper abdominal pain relieved by eating,Peptic Ulcer
+jaundice with abdominal pain yellowing skin,Gallstones
+stomach pain improves with antacids,Peptic Ulcer
+Suffering from fatigue and weakness,Anemia
+blisters all over body,Chickenpox
+swollen joints,Arthritis
+Recently developed high fever with chills,Malaria
+pain under right shoulder blade,Gallstones
+clammy or sweaty skin with chills,Sepsis
+cloudy urine,Urinary Tract Infection
+functional bowel disorder cramping,Irritable Bowel Syndrome
+hives breaking out after eating,Allergic Reaction
+bacterial meningitis symptoms neck pain headache,Meningitis
+heartburn after eating meals,GERD
+feeling cold and tired,Hypothyroidism
+small joints hands feet affected,Rheumatoid Arthritis
+pain between shoulder blades after meals,Gallstones
+appendicitis symptoms pain nausea fever,Appendicitis
+throat infection swollen tonsils,Tonsillitis
+fever with cough and rash,Measles
+post-exertional malaise severe fatigue,Chronic Fatigue Syndrome
+breathing difficulty with exercise,Asthma
+Recently developed fatigue and weight gain,Hypothyroidism
+abdominal pain with fever,Typhoid
+chest discomfort spreading to shoulders,Angina
+anaphylaxis symptoms throat swelling breathing trouble,Anaphylaxis
+joint pain with movement,Arthritis
+worst headache of my life sudden onset,Stroke
+acute pain lower right quadrant with fever,Appendicitis
+itchy red rash,Chickenpox
+I have severe headache,Hypertension
+Feeling headache and weakness,Typhoid
+chest discomfort improves with nitroglycerin,Angina
+frequent urination with pain,Urinary Tract Infection
+I have runny nose and sneezing,Common Cold
+persistent cough with mucus,Bronchitis
+throat closing up can't swallow,Anaphylaxis
+right side stomach pain with constipation,Appendicitis
+periodic fever attacks,Malaria
+meningitis symptoms headache stiff neck fever,Meningitis
+exercise makes fatigue much worse,Chronic Fatigue Syndrome
+widespread pain all over body,Fibromyalgia
+chronic pain syndrome widespread,Fibromyalgia
+chronic fatigue unable to function,Chronic Fatigue Syndrome
+duodenal ulcer pain before meals,Peptic Ulcer
+drug allergy rash itching swelling,Allergic Reaction
+severe body ache and fever,Dengue
+chest tightness during exercise,Angina
+IBS symptoms cramping diarrhea,Irritable Bowel Syndrome
+nausea with stomach discomfort,Peptic Ulcer
+Experiencing fever with body ache,Malaria
+renal colic severe back pain,Kidney Stones
+shortness of breath and cough,Bronchitis
+Having difficulty breathing,Asthma
+stiff joints after rest,Arthritis
+burning in chest after eating,GERD
+broken bone from minor fall,Osteoporosis
+chest pain with headache,Hypertension
+cramping relieved by bowel movement,Irritable Bowel Syndrome
+rapid pulse with dizziness after eating,Anaphylaxis
+big toe joint extremely painful,Gout
+I have shortness of breath,Anemia
+osteoporosis symptoms back pain height loss,Osteoporosis
+squeezing sensation in center of chest,Heart Attack
+chronic sinusitis facial pain,Sinusitis
+Recently developed pain on one side of head,Migraine
+excessive thirst and urination,Diabetes
+abdominal pain with diarrhea,Gastroenteritis
+anaphylactic shock sudden severe reaction,Anaphylaxis
+gout attack big toe excruciating pain,Gout
+joint swelling and pain,Arthritis
+body pain with fever,Dengue
+rheumatoid arthritis joint inflammation,Rheumatoid Arthritis
+chronic cough from acid reflux,GERD
+chronic widespread musculoskeletal pain,Fibromyalgia
+burning sensation in stomach,Peptic Ulcer
+left side numbness facial droop,Stroke
+coughing up phlegm,Bronchitis
+food allergy symptoms stomach upset rash,Allergic Reaction
+cold sensitivity,Hypothyroidism
+shortness of breath for past few days,Hypertension
+congestion with mild headache,Common Cold
+Having sneezing and watery eyes,Common Cold
+multiple joints affected symmetrically,Rheumatoid Arthritis
+headache with sensitivity to light,Migraine
+lower right belly pain that started near belly button,Appendicitis
+Feeling severe body ache and fever,Dengue
+altered mental status with fever,Meningitis
+sour taste in mouth regurgitation,GERD
+loss of taste and smell,COVID-19
+biliary colic pain upper right abdomen,Gallstones
+pale skin,Anemia
+weight loss with increased appetite for past few days,Hyperthyroidism
+tender points painful to touch,Fibromyalgia
+stomach cramps with nausea since yesterday,Gastroenteritis
+I have dry cough with fever,COVID-19
+feeling faint after bee sting,Anaphylaxis
+Having constipation and fatigue,Hypothyroidism
+pain in chest spreading to left arm,Heart Attack
+shortness of breath with or without chest pain,Heart Attack
+red spots turning to blisters,Chickenpox
+gluten triggers digestive symptoms,Celiac Disease
+cartilage breakdown joint pain,Osteoarthritis
+easily fractured bones osteoporosis,Osteoporosis
+sharp pain below right ribcage,Gallstones
+autoimmune arthritis multiple joints,Rheumatoid Arthritis
+painful swallowing with fever,Tonsillitis
+IBS flare cramping bloating,Irritable Bowel Syndrome
+chronic exhaustion lasting months,Chronic Fatigue Syndrome
+chest discomfort,Hypertension
+pain in multiple joints,Arthritis
+Suffering from increased thirst and hunger,Diabetes
+Recently developed fever with cough and rash,Measles
+tiredness and shortness of breath,Anemia
+memory problems with extreme tiredness,Chronic Fatigue Syndrome
+fibromyalgia pain fatigue memory problems,Fibromyalgia
+gluten sensitivity stomach pain,Celiac Disease
+Suffering from fever with chest pain,Pneumonia
+frequent urination,Diabetes
+contact dermatitis red itchy rash,Allergic Reaction
+thick yellow or green nasal discharge,Sinusitis
+red rash spreading,Measles
+chest pain relieved by rest,Angina
+chest pain goes away after resting,Angina
+widespread musculoskeletal pain chronic,Fibromyalgia
+Experiencing loss of taste and smell,COVID-19
+chest pain when breathing,Pneumonia
+acid reflux burning in chest,GERD
+high fever with headache,Influenza
+high fever with sensitivity to light,Meningitis
+fingers swollen difficult to bend,Rheumatoid Arthritis
+fatigue and weight gain,Hypothyroidism
+irregular heartbeat,Hypertension
+difficulty breathing for past few days,COVID-19
+frequent urge to urinate since yesterday,Urinary Tract Infection
+Suffering from rash with fever,Measles
+celiac symptoms diarrhea bloating,Celiac Disease
+chronic cough with blood,Tuberculosis
+big toe swollen can't wear shoes,Gout
+pain in jaw neck or back with chest discomfort,Heart Attack
+dizziness and fatigue for past few days,Anemia
+bulging fontanelle in infant with fever,Meningitis
+pressure or squeezing in chest during activity,Angina
+morning stiffness lasting over 30 minutes,Rheumatoid Arthritis
+shortness of breath,Anemia
+red rash spreading since yesterday,Measles
+vertebral compression fracture pain,Osteoporosis
+Having loose stools and fever,Gastroenteritis
+nasal discharge with facial pain,Sinusitis
+osteoarthritis symptoms joint pain stiffness,Osteoarthritis
+chest pain with cough,Tuberculosis
+breathing difficulty and fever,COVID-19
+prolonged high temperature,Typhoid
+body ache with high temperature for past few days,Influenza
+sudden onset joint pain at night,Gout
+cold sweat with severe chest pain,Heart Attack
+shortness of breath and fever,Pneumonia
+fatigue and weakness,Anemia
+weakness and pallor,Anemia
+sharp pain below ribcage that won't go away,Kidney Stones
+fever and sweating episodes,Malaria
+weakness and dizziness,Anemia
+seasonal allergies sneezing congestion,Allergic Reaction
+allergic reaction to food medication,Allergic Reaction
+bacterial tonsillitis severe pain,Tonsillitis
+tiredness with pale complexion,Anemia
+fever with abdominal pain for past few days,Typhoid
+swelling in hands and feet,Arthritis
+burning stomach pain between meals,Peptic Ulcer
+stable angina pain predictable pattern,Angina
+spinal compression fractures pain,Osteoporosis
+Suffering from high fever with joint pain,Dengue
+upper abdomen burning pain,Peptic Ulcer
+chest pain lasting more than few minutes,Heart Attack
+joint pain and headache,Dengue
+abdominal bloating with gluten,Celiac Disease
+stomach pain wakes me at night,Peptic Ulcer
+cough with nasal discharge,Common Cold
+chest congestion,Bronchitis
+Recently developed fever with dry cough,COVID-19
+RA symptoms joint pain swelling stiffness,Rheumatoid Arthritis
+low blood pressure with rapid pulse,Sepsis
+itching without rash after contact,Allergic Reaction
+trouble walking dizziness loss of balance,Stroke
+Experiencing rash with fever,Chickenpox
+waves of pain in back moving to groin,Kidney Stones
+stomach ulcer pain after eating,Peptic Ulcer
+sudden pain in upper right abdomen,Gallstones
+Feeling severe throbbing headache,Migraine
+difficulty breathing,Asthma
+sharp pain in lower right abdomen,Appendicitis
+diarrhea after eating gluten,Celiac Disease
+heart attack symptoms chest pain arm pain,Heart Attack
+shortness of breath,Hypertension
+cough with colored mucus,Bronchitis
+tonsillitis symptoms throat pain fever,Tonsillitis
+swollen red hot joint overnight,Gout
+sinus infection pain green mucus,Sinusitis
+rheumatoid nodules with joint pain,Rheumatoid Arthritis
+I have high fever lasting days,Typhoid
+gastric ulcer gnawing pain,Peptic Ulcer
+burning pain below breastbone,Peptic Ulcer
+fever and red skin rash,Measles
+low bone density fracture risk,Osteoporosis
+joint pain worse with activity,Osteoarthritis
+red spots turning to blisters since yesterday,Chickenpox
+fragile bones frequent fractures,Osteoporosis
+peptic ulcer pain upper belly,Peptic Ulcer
+Having nasal congestion and headache,Common Cold
+dizziness and headache for past few days,Hypertension
+Having joint pain and stiffness,Arthritis
+allergic symptoms sneezing itching,Allergic Reaction
+joint stiffness in morning since yesterday,Arthritis
+fever and extreme fatigue,Influenza
+increased thirst and hunger,Diabetes
+sudden chest pain sweating feeling doom,Heart Attack
+severe headache worst ever with fever,Meningitis
+uric acid buildup joint pain,Gout
+sharp pain when urinating blood in pee,Kidney Stones
+Having weakness and pallor,Anemia
+measles rash with cough,Measles
+rash starting on face,Measles
+can't move right side of body suddenly,Stroke
+rapid pulse with nervousness,Hyperthyroidism
+mild swelling with itching,Allergic Reaction
+severe pain in back and side below ribs,Kidney Stones
+severe headache and fever,Influenza
+loss of height over time,Osteoporosis
+chest tightness and cough,Asthma
+celiac disease diarrhea weight loss,Celiac Disease
+stuffy nose and sore throat,Common Cold
+Experiencing coughing up phlegm,Bronchitis
+cold sensitivity for past few days,Hypothyroidism
+high fever with eye pain,Dengue
+severe allergic reaction throat swelling,Anaphylaxis
+high fever lasting days,Typhoid

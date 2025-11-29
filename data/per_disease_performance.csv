@@ -1,0 +1,44 @@
+Disease,Precision,Recall,F1-Score,Support
+Allergic Reaction,1.0,1.0,1.0,9
+Gout,1.0,1.0,1.0,9
+Hyperthyroidism,1.0,1.0,1.0,9
+Hypothyroidism,1.0,1.0,1.0,9
+Irritable Bowel Syndrome,1.0,1.0,1.0,9
+Kidney Stones,1.0,1.0,1.0,9
+Osteoarthritis,1.0,1.0,1.0,9
+Osteoporosis,1.0,1.0,1.0,9
+Peptic Ulcer,1.0,1.0,1.0,9
+Pneumonia,1.0,1.0,1.0,9
+Rheumatoid Arthritis,1.0,1.0,1.0,9
+Sepsis,1.0,1.0,1.0,9
+Sinusitis,1.0,1.0,1.0,9
+Stroke,1.0,1.0,1.0,9
+Tonsillitis,1.0,1.0,1.0,9
+Tuberculosis,1.0,1.0,1.0,9
+Typhoid,1.0,1.0,1.0,9
+Heart Attack,1.0,1.0,1.0,9
+Urinary Tract Infection,1.0,1.0,1.0,9
+Gastroenteritis,1.0,1.0,1.0,9
+Gallstones,1.0,1.0,1.0,9
+Angina,1.0,1.0,1.0,9
+Appendicitis,1.0,1.0,1.0,9
+Arthritis,1.0,1.0,1.0,9
+Celiac Disease,1.0,1.0,1.0,9
+Chronic Fatigue Syndrome,1.0,1.0,1.0,9
+Common Cold,1.0,1.0,1.0,9
+Dengue,1.0,1.0,1.0,9
+Diabetes,1.0,1.0,1.0,9
+Fibromyalgia,1.0,1.0,1.0,9
+GERD,1.0,1.0,1.0,9
+Measles,0.9,1.0,0.9473684210526315,9
+Migraine,0.9,1.0,0.9473684210526315,9
+Anaphylaxis,0.9,1.0,0.9473684210526315,9
+Chickenpox,1.0,0.8888888888888888,0.9411764705882353,9
+COVID-19,1.0,0.8888888888888888,0.9411764705882353,9
+Anemia,0.8181818181818182,1.0,0.9,9
+Malaria,0.8888888888888888,0.8888888888888888,0.8888888888888888,9
+Bronchitis,0.8888888888888888,0.8888888888888888,0.8888888888888888,9
+Hypertension,1.0,0.7777777777777778,0.875,9
+Meningitis,0.75,1.0,0.8571428571428571,9
+Asthma,0.875,0.7777777777777778,0.8235294117647058,9
+Influenza,0.8333333333333334,0.5555555555555556,0.6666666666666666,9

@@ -1,0 +1,42 @@
+[
+  {
+    "timestamp": "2025-11-29T19:13:29.357403",
+    "input": "fever and headache",
+    "prediction": "Influenza",
+    "confidence": 0.85,
+    "method": "ml_model",
+    "feedback": null
+  },
+  {
+    "timestamp": "2025-11-29T19:13:29.357667",
+    "input": "chest pain radiating to arm",
+    "prediction": "Heart Attack",
+    "confidence": 0.92,
+    "method": "ml_model",
+    "feedback": null
+  },
+  {
+    "timestamp": "2025-11-29T19:13:29.357917",
+    "input": "severe back pain with blood in urine",
+    "prediction": "Kidney Stones",
+    "confidence": 0.88,
+    "method": "ml_model",
+    "feedback": null
+  },
+  {
+    "timestamp": "2025-11-29T19:13:29.358175",
+    "input": "feeling very tired all the time",
+    "prediction": "Chronic Fatigue Syndrome",
+    "confidence": 0.45,
+    "method": "ml_model",
+    "feedback": null
+  },
+  {
+    "timestamp": "2025-11-29T19:13:29.358418",
+    "input": "sharp pain in lower right abdomen",
+    "prediction": "Appendicitis",
+    "confidence": 0.79,
+    "method": "ml_model",
+    "feedback": null
+  }
+]

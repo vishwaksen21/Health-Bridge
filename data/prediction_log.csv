@@ -1,0 +1,6 @@
+timestamp,input,prediction,confidence,method,feedback
+2025-11-29T19:13:29.357403,fever and headache,Influenza,0.85,ml_model,
+2025-11-29T19:13:29.357667,chest pain radiating to arm,Heart Attack,0.92,ml_model,
+2025-11-29T19:13:29.357917,severe back pain with blood in urine,Kidney Stones,0.88,ml_model,
+2025-11-29T19:13:29.358175,feeling very tired all the time,Chronic Fatigue Syndrome,0.45,ml_model,
+2025-11-29T19:13:29.358418,sharp pain in lower right abdomen,Appendicitis,0.79,ml_model,

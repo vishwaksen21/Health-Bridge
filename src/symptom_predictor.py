@@ -1,6 +1,7 @@
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
+from sklearn.calibration import CalibratedClassifierCV  # QUICK WIN #3: Probability calibration
 import joblib
 import re
 import os
@@ -16,14 +17,22 @@ def clean_text(text):
 def preprocess_kaggle_dataset(data_path):
     df = pd.read_csv(data_path)
 
-    # Find label column
+    # Check if already in correct format (symptom_text, disease)
+    if 'symptom_text' in df.columns and 'disease' in df.columns:
+        print(f"✅ Dataset already in correct format")
+        df['symptom_text'] = df['symptom_text'].apply(clean_text)
+        df = df[df['symptom_text'].str.strip().str.len() > 0]
+        print(f"✅ Preprocessed {len(df)} rows | {df['disease'].nunique()} unique diseases")
+        return df[['symptom_text', 'disease']]
+    
+    # Find label column (for Kaggle format datasets)
     label_col = None
     for col in df.columns:
         if col.lower().strip() == "prognosis":
             label_col = col
             break
     if not label_col:
-        raise ValueError("❌ 'prognosis' column not found in dataset!")
+        raise ValueError("❌ Dataset must have either ('symptom_text', 'disease') or 'prognosis' column!")
 
     # Symptom columns = all except prognosis
     symptom_cols = [c for c in df.columns if c != label_col]
@@ -49,12 +58,33 @@ def preprocess_kaggle_dataset(data_path):
 def train_symptom_model(data_path="data/symptom_disease.csv", out_path="data/symptom_model.pkl"):
     df = preprocess_kaggle_dataset(data_path)
 
-    vectorizer = TfidfVectorizer(max_features=5000, stop_words='english')
+    # QUICK WIN #2: Bigrams to capture multi-word phrases ("chest pain", "sore throat")
+    vectorizer = TfidfVectorizer(
+        max_features=8000,  # Increased from 5000 for better coverage
+        ngram_range=(1, 2),  # Captures single words + bigrams
+        stop_words='english'
+    )
     X = vectorizer.fit_transform(df['symptom_text'])
     y = df['disease']
 
-    model = LogisticRegression(max_iter=500)
+    # QUICK WIN #1: Class balancing to handle imbalanced disease distribution
+    base_model = LogisticRegression(
+        max_iter=1000,  # Increased iterations for convergence
+        class_weight='balanced',  # Automatically adjust weights inversely proportional to class frequencies
+        random_state=42
+    )
+    
+    # QUICK WIN #3: Probability calibration using Platt scaling
+    # This makes confidence scores more reliable and better calibrated
+    print("🔧 Applying probability calibration (Platt scaling)...")
+    model = CalibratedClassifierCV(
+        base_model,
+        method='sigmoid',  # Platt scaling - fits sigmoid to map scores to probabilities
+        cv=5,  # 5-fold cross-validation for calibration
+        n_jobs=-1  # Use all CPU cores
+    )
     model.fit(X, y)
+    print("✅ Model calibrated successfully!")
 
     os.makedirs("data", exist_ok=True)
     joblib.dump((vectorizer, model), out_path)
@@ -131,7 +161,11 @@ def predict_disease(prompt, model_path="data/symptom_model.pkl"):
     pred = model.predict(X)[0]
     proba = model.predict_proba(X).max()
     
-    return pred, round(proba, 3)
+    # QUICK WIN #4: Low confidence warning
+    # If model is uncertain (confidence < 0.45), flag it for user awareness
+    confidence = round(proba, 3)
+    
+    return pred, confidence
 
 # ---------- Main ----------
 if __name__ == "__main__":

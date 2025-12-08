@@ -13,15 +13,25 @@ Features:
 
 import streamlit as st
 import sys
+import os
 import json
-from typing import Optional
+from typing import Optional, Dict, List
+import traceback
 
 # Add project root to path
-sys.path.append('/workspaces/Cure-Blend')
+project_root = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, project_root)
 
-from src.ai_assistant import load_knowledge_base, generate_comprehensive_answer
+# Core imports with error handling
+try:
+    from src.ai_assistant import load_knowledge_base, generate_comprehensive_answer
+    CORE_OK = True
+except ImportError as e:
+    st.error(f"⚠️ Core module import error: {e}")
+    CORE_OK = False
 
 # Try to import advanced features
+ADVANCED_FEATURES_OK = False
 try:
     from src.multi_disease_detector import MultiDiseaseDetector, format_multi_disease_output
     from src.severity_classifier import SeverityClassifier, format_severity_output
@@ -34,8 +44,9 @@ try:
     from src.feedback_system import FeedbackSystem
     from src.explainability import SymptomMatcher, create_symptom_importance_chart
     ADVANCED_FEATURES_OK = True
-except ImportError:
-    ADVANCED_FEATURES_OK = False
+except ImportError as e:
+    # Advanced features are optional
+    pass
 
 # Page configuration
 st.set_page_config(
@@ -136,7 +147,16 @@ if 'show_feedback' not in st.session_state:
 @st.cache_resource
 def load_system():
     """Load the knowledge base (cached)"""
-    return load_knowledge_base()
+    try:
+        if not CORE_OK:
+            st.error("⚠️ Core modules not loaded. Please check installation.")
+            return None
+        kb = load_knowledge_base()
+        return kb
+    except Exception as e:
+        st.error(f"Error loading knowledge base: {e}")
+        st.info("The system will continue with limited functionality.")
+        return None
 
 def create_patient_profile_sidebar():
     """Create patient profile input in sidebar"""
@@ -341,15 +361,41 @@ def analyze_symptoms(symptoms: str, patient_profile: Optional[PatientProfile],
                      use_ai: bool, use_advanced: bool):
     """Analyze symptoms with optional advanced features"""
     
+    if not CORE_OK:
+        return {
+            'basic_response': {'error': 'System not initialized properly'},
+            'disease_analysis': None,
+            'severity': None,
+            'recommendations': None
+        }
+    
     knowledge = st.session_state.knowledge_base
     
+    if knowledge is None:
+        return {
+            'basic_response': {'error': 'Knowledge base not loaded'},
+            'disease_analysis': None,
+            'severity': None,
+            'recommendations': None
+        }
+    
     # Basic prediction
-    response = generate_comprehensive_answer(
-        symptoms,
-        knowledge,
-        use_ai=use_ai,
-        include_drugs=True
-    )
+    try:
+        response = generate_comprehensive_answer(
+            symptoms,
+            knowledge,
+            use_ai=use_ai,
+            include_drugs=True
+        )
+    except Exception as e:
+        st.error(f"Error during analysis: {e}")
+        response = {
+            'detected_disease': 'Unknown',
+            'confidence': 0.0,
+            'herbal_recommendations': [],
+            'drug_recommendations': [],
+            'ai_insights': f'Error: {str(e)}'
+        }
     
     results = {
         'basic_response': response,
@@ -386,6 +432,12 @@ def analyze_symptoms(symptoms: str, patient_profile: Optional[PatientProfile],
 def main():
     """Main Streamlit application"""
     
+    # Check if core modules are available
+    if not CORE_OK:
+        st.error("⚠️ **System Error**: Core modules are not loaded properly.")
+        st.info("Please ensure all dependencies are installed: `pip install -r requirements.txt`")
+        st.stop()
+    
     # Header
     st.markdown('<div class="main-header">🏥 Cure-Blend 🌿<br/>AI-Powered Health Recommendation System</div>', 
                 unsafe_allow_html=True)
@@ -394,12 +446,18 @@ def main():
     with st.sidebar:
         st.title("⚙️ Settings")
         
+        # System status
+        with st.expander("📊 System Status", expanded=False):
+            st.markdown(f"**Core System**: {'✅ Active' if CORE_OK else '❌ Error'}")
+            st.markdown(f"**Advanced Features**: {'✅ Active' if ADVANCED_FEATURES_OK else '⚠️ Disabled'}")
+            st.markdown(f"**Knowledge Base**: {'✅ Loaded' if st.session_state.knowledge_base else '⚠️ Not Loaded'}")
+        
         # Advanced features toggle
-        use_advanced = st.checkbox("Enable Advanced Features", value=True, 
+        use_advanced = st.checkbox("Enable Advanced Features", value=ADVANCED_FEATURES_OK, 
                                     help="Multi-disease detection, severity scoring, personalized warnings")
         
-        if not ADVANCED_FEATURES_OK:
-            st.error("⚠️ Advanced features not available")
+        if not ADVANCED_FEATURES_OK and use_advanced:
+            st.warning("⚠️ Advanced features not available. Install additional dependencies.")
             use_advanced = False
         
         # AI insights toggle
@@ -473,6 +531,12 @@ def main():
     if st.session_state.analysis_results:
         results = st.session_state.analysis_results
         response = results['basic_response']
+        
+        # Check for errors
+        if 'error' in response:
+            st.error(f"⚠️ Analysis Error: {response['error']}")
+            st.info("Please try again or rephrase your symptoms.")
+            return
         
         st.divider()
         st.header("📋 Analysis Results")
@@ -699,6 +763,76 @@ def main():
                         )
                         st.success("✅ Thank you! Your feedback helps improve the system.")
                         st.session_state.show_feedback = False
+    
+    # Footer with helpful information
+    st.divider()
+    with st.expander("ℹ️ About Cure-Blend", expanded=False):
+        st.markdown("""
+        ### 🏥 Cure-Blend - AI-Powered Health Recommendation System
+        
+        **Features:**
+        - 🔍 Multi-disease detection with comorbidity analysis
+        - 📊 Severity classification (0-100 scoring)
+        - 👤 Personalized recommendations for special populations
+        - 🌿 Herbal remedy suggestions
+        - 💊 Pharmaceutical medication recommendations
+        - 🤖 AI-powered insights and explanations
+        
+        **How to Use:**
+        1. Describe your symptoms in detail
+        2. (Optional) Create a patient profile for personalized recommendations
+        3. Click "Analyze Symptoms" to get recommendations
+        4. Review both herbal and pharmaceutical options
+        5. Provide feedback to help improve the system
+        
+        **Important:**
+        - This is an informational tool only
+        - Always consult a healthcare professional
+        - Do not use for emergency situations
+        - Report serious symptoms to medical services immediately
+        
+        **Version:** 2.0 | **Last Updated:** December 2025
+        """)
+    
+    # Quick help section
+    with st.expander("❓ Need Help?", expanded=False):
+        st.markdown("""
+        **Common Issues:**
+        
+        **Q: The system says "Low Confidence"**
+        - Try describing symptoms in more detail
+        - Mention duration, intensity, and location
+        - Include any recent events (travel, food, exposure)
+        
+        **Q: I want to enable advanced features**
+        - Check the sidebar for "Enable Advanced Features"
+        - If disabled, some dependencies may be missing
+        
+        **Q: How do I create a patient profile?**
+        - Enable "Personalized Recommendations" in the sidebar
+        - Fill in age, gender, and medical conditions
+        - This helps identify contraindications
+        
+        **Q: Are the recommendations safe?**
+        - Recommendations are informational only
+        - Always verify with a healthcare provider
+        - Check for allergies and drug interactions
+        - Follow prescribed medications first
+        """)
 
 if __name__ == "__main__":
+    # Show startup information
+    if 'app_started' not in st.session_state:
+        st.session_state.app_started = True
+        
+        # Display startup banner
+        st.info("""
+        ### 🚀 Welcome to Cure-Blend!
+        
+        **System Loading...**
+        - Core modules: Loading...
+        - Advanced features: Checking...
+        - Knowledge base: Preparing...
+        """)
+    
     main()

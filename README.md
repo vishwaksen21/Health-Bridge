@@ -511,7 +511,7 @@ See repository for license details.
 
 ---
 
-## 👨‍💻 Authors
+## 👨‍💻 Authors:
 
 **Cure-Blend Team**  
 Repository: [github.com/vishwaksen21/Cure-Blend](https://github.com/vishwaksen21/Cure-Blend)
